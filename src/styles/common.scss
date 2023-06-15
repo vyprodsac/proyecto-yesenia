@@ -1,0 +1,17 @@
+:root {
+  --theme-color1: #4d9d99;
+  --theme-color2: #c6dabe;
+  --txt-primary: #55585b;
+  --txt-secondary: #adadad;
+  --color-border: #ececec;
+  --color-footer: #55585b;
+}
+
+.section {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  @media (min-width: 992px) {
+    padding-bottom: 1.6rem;
+    padding-top: 1.6rem;
+  }
+}
