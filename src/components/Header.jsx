@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import CompanyLogo from "../assets/images/company_logo.svg";
 import vevigLogo from "../assets/images/company_logo.svg";
 
 export default function Header() {
@@ -71,20 +70,6 @@ export default function Header() {
             </div>
           </div>
           <div className="navigation__body">
-            <div className="navigation__container-company-logo">
-              <img
-                className="navigation__company-logo"
-                src={CompanyLogo}
-                alt="Logo empresa"
-                title="Logo Empresa"
-              />
-              <h2 className="navigation__company-name">Company Name</h2>
-              <p className="navigation__company-data">
-                Av. 23 San Isidro - Lima
-              </p>
-              <p className="navigation__company-data">RUC: 123456789</p>
-              <p className="navigation__company-data">vevig.info@gmail.com</p>
-            </div>
             <div className="navigation__container-menu ">
               <ul className="navigation__list">
                 <li>
@@ -94,23 +79,29 @@ export default function Header() {
                 </li>
                 <li>
                   <Link to="/register" className="navigation__item">
-                    Nosotros
+                    Vende con nosotros
                   </Link>
                 </li>
                 <li>
-                  <Link to="/register" className="navigation__item">
-                    Rastrear producto
+                  <Link
+                    to="/registro-iniciar-sesion"
+                    className="navigation__item"
+                  >
+                    Blog
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="navigation__login-register">
               <span className="navigation__login-register-icon fa-sharp fa-regular fa-circle-user" />
-              <Link to="/register" className="navigation__login-register-btn">
-                Identifícate
-              </Link>
-              <Link to="/register" className="navigation__login-register-btn">
+              <Link
+                to="/registro-iniciar-sesion"
+                className="navigation__login-register-btn"
+              >
                 Registrate
+              </Link>
+              <Link to="/car" className="navigation__login-register-btn">
+                Carrito
               </Link>
             </div>
           </div>
@@ -168,7 +159,10 @@ export default function Header() {
             </button>
           </form>
           <div className="header__items-desktop">
-            <Link to="/register" className="header__content--desktop__links">
+            <Link
+              to="/registro-iniciar-sesion"
+              className="header__content--desktop__links"
+            >
               <span className="fa-regular fa-circle-user fa-fw header__content--desktop__icon2" />
               <span className="header__content--desktop__txt-btn">
                 Registrate
@@ -184,5 +178,3 @@ export default function Header() {
     </header>
   );
 }
-
-

@@ -213,22 +213,6 @@
     padding-right: 1rem;
   }
 
-  &__container-company-logo {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 50%;
-  }
-
-  &__company-data {
-    padding-top: 0.5rem;
-  }
-
-  &__company-name {
-    color: var(--theme-color1);
-  }
-
   &__container-menu {
     display: flex;
     justify-content: center;

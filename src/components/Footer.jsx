@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import footerTarjetas from "../assets/images/footer-tarjetas.png";
+
 export default function Footer() {
   return (
     <div className="footer">
@@ -26,35 +29,99 @@ export default function Footer() {
       <div className="footer__container">
         <div className="container footer__container--content">
           <div className="footer__account">
-            <h2>Mi cuenta</h2>
-            <ul>
-              <li>Registrate</li>
-              <li>Inicia Sesión</li>
-              <li>Seguir tu pedido</li>
+            <h2 className="footer__titles">Mi cuenta</h2>
+            <ul className="footer__account-list">
+              <li className="footer__account-item">
+                <Link className="footer__account-link">Registrate</Link>
+              </li>
+              <li className="footer__account-item">
+                <Link className="footer__account-link">Inicia Sesión</Link>
+              </li>
+              <li className="footer__account-item">
+                <Link className="footer__account-link">Seguir tu pedido</Link>
+              </li>
             </ul>
           </div>
           <div className="footer__about-us">
-            <h2>Acerca de nosotros</h2>
-            <ul>
-              <li>Quienes Somos</li>
-              <li>Terminos y condiciones</li>
-              <li>Trabaja con nosotros</li>
+            <h2 className="footer__titles">Acerca de nosotros</h2>
+            <ul className="footer__about-us-list">
+              <li className="footer__about-us-item">
+                <Link className="footer__about-us-link">Quienes Somos</Link>
+              </li>
+              <li className="footer__about-us-item">
+                <Link className="footer__about-us-link">
+                  Terminos y condiciones
+                </Link>
+              </li>
+              <li className="footer__about-us-item">
+                <Link className="footer__about-us-link">
+                  Trabaja con nosotros
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="footer__customer-support">
-            <h2>Atención al cliente</h2>
-            <ul>
-              <li>Pregutas Frecuentes</li>
-              <li>Libro de reclamaciones</li>
+            <h2 className="footer__titles">Atención al cliente</h2>
+            <ul className="footer__customer-support-list">
+              <li className="footer__customer-support-item">
+                <Link className="footer__customer-support-link">
+                  Pregutas Frecuentes
+                </Link>
+              </li>
+              <li className="footer__customer-support-item">
+                <Link className="footer__customer-support-link">
+                  Libro de reclamaciones
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="footer__contact">
-            <h2>Contacto</h2>
-            <ul>
-              <li>+51 999 999 999</li>
-              <li>marketing@ventifastperú.com</li>
+            <h2 className="footer__titles">Contacto</h2>
+            <ul className="footer__contact-list">
+              <li className="footer__contact-item">
+                <Link className="footer__contact-link">+51 999 999 999</Link>
+              </li>
+              <li className="footer__contact-item">
+                <Link className="footer__contact-link">
+                  marketing@ventifastperú.com
+                </Link>
+              </li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div className="footer__bottom">
+        <div className="footer__bottom-container container">
+          <img className="footer__img" src={footerTarjetas} alt="" />
+          <ul className="footer__social-list">
+            <li className="footer__social-item">
+              <a
+                href="#"
+                className="footer__social-link fa-brands fa-facebook"
+              />
+            </li>
+            <li>
+              <a
+                href="#"
+                className="footer__social-link fa-brands fa-instagram"
+              />
+            </li>
+            <li>
+              <a
+                href="#"
+                className="footer__social-link fa-brands fa-youtube"
+              />
+            </li>
+            <li>
+              <a href="#" className="footer__social-link fa-brands fa-tiktok" />
+            </li>
+            <li>
+              <a
+                href="#"
+                className="footer__social-link fa-brands fa-twitter"
+              />
+            </li>
+          </ul>
         </div>
       </div>
     </div>
