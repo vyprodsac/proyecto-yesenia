@@ -1,0 +1,47 @@
+.profile {
+  padding-top: 5.5rem;
+  @media (min-width: 992px) {
+    padding-top: 12rem;
+  }
+  img {
+    border-radius: 10px;
+    aspect-ratio: 1;
+  }
+  &__title {
+    font-size: 2rem;
+    color: #353838;
+  }
+  &__subtitle {
+    display: block;
+    padding-top: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  &__content {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.8rem;
+    }
+  }
+  &__img-name {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #353838;
+    border: 1px solid var(--theme-color1);
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      background-color: var(--theme-color1);
+      color: white;
+      transition: all 300ms ease-in-out;
+    }
+  }
+}
