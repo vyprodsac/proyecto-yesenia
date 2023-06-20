@@ -1,16 +1,54 @@
 import { Link } from "react-router-dom";
+import {} from "react";
+import { auth, googleProvider } from "../firebase/config";
+import { signInWithPopup, signOut } from "firebase/auth";
+import { useState, useEffect } from "react";
+
 
 export default function SignInSignUp() {
+  const [userName, setUserName] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      setUserName(user);
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const signInWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const userName = result.user?.displayName || "";
+      setUserName(userName);
+      setIsLoggedIn(true);
+      localStorage.setItem("user", userName); // Guarda el nombre de usuario en localStorage
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const logOut = async () => {
+    try {
+      await signOut(auth);
+      setUserName("");
+      setIsLoggedIn(false);
+      localStorage.removeItem("user"); // Elimina el nombre de usuario de localStorage
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <section className="sign-in-sign-up container">
       <h1 className="sign-in-sign-up__title">
         || Inicie sesión o Cree una cuenta
       </h1>
+
       <div className="sign-in-sign-up__content">
-        {/* Iniciar sesion */}
         <div className="sign-in-sign-up__sign-in">
           <h2 className="sign-in-sign-up__sign-in-title">Usuario existente</h2>
-          {/* Formulario par registrarse con correo , contraseña y un boton */}
           <form action="" className="sign-in-sign-up__sign-in-form">
             <div className="sign-in-sign-up__sign-in-form-group">
               <label className="sign-in-sign-up__sign-in-label" htmlFor="email">
@@ -45,6 +83,25 @@ export default function SignInSignUp() {
             <Link to={"/planes"} className="sign-in-sign-up__sign-in-button">
               Iniciar sesión
             </Link>
+            <button
+              type="button"
+              onClick={signInWithGoogle}
+              className="sign-in-sign-up__sign-in-button"
+            >
+              Iniciar sesión con Google
+            </button>
+            <p>
+              {isLoggedIn
+                ? `Estado: Logeado - Usuario: ${userName}`
+                : "Estado: No Logeado"}
+            </p>
+            <button
+              type="button"
+              onClick={logOut}
+              className="sign-in-sign-up__sign-in-button"
+            >
+              Cerrar sesión
+            </button>
           </form>
         </div>
         {/* Registrarse */}

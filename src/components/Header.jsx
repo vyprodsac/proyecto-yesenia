@@ -15,11 +15,8 @@ export default function Header() {
         header.classList.toggle("header--sticky", windowPosition);
       }
     };
-
     isScrolling();
-
     window.addEventListener("scroll", isScrolling);
-
     return () => {
       window.removeEventListener("scroll", isScrolling);
     };
@@ -100,7 +97,7 @@ export default function Header() {
               >
                 Registrate
               </Link>
-              <Link to="/car" className="navigation__login-register-btn">
+              <Link to="/cart" className="navigation__login-register-btn">
                 Carrito
               </Link>
             </div>
@@ -154,9 +151,9 @@ export default function Header() {
               className="header__content--desktop__search"
               placeholder="Búsqueda de productos..."
             />
-            <button className="header__content--desktop__btn">
+            {/* <button className="header__content--desktop__btn">
               <span className="fa-light fa-search header__content--desktop__icon" />
-            </button>
+            </button> */}
           </form>
           <div className="header__items-desktop">
             <Link
@@ -168,10 +165,11 @@ export default function Header() {
                 Registrate
               </span>
             </Link>
-            <Link to="/car" className="header__content--desktop__links">
+            <Link to="/cart" className="header__content--desktop__links">
               <span className="fa-regular fa-cart-shopping header__content--desktop__icon2" />
               <span className="header__content--desktop__txt-btn">Carrito</span>
             </Link>
+            <p className="header__session-user">ESTADO DE SESION + USUARIO</p>
           </div>
         </div>
       </div>

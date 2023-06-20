@@ -7,6 +7,9 @@ import Plans from "./components/Plans";
 import Profile from "./components/Profile";
 import Platform from "./pages/Platform";
 import Courses from "./pages/Courses";
+import Platform2 from "./pages/Platform2";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route path="/perfil-plataforma" element={<Profile />} />
           <Route path="/plataforma-inicio" element={<Platform />} />
           <Route path="/cursos-inicio" element={<Courses />} />
+          <Route path="/plataforma-inicio2" element={<Platform2 />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/check-out" element={<Checkout/>} />
         </Routes>
       </Layout>
     </BrowserRouter>
