@@ -1,8 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import vevigLogo from "../assets/images/company_logo.svg";
+import { useContext } from "react";
+import { AuthContext } from "./AuthContext";
 
 export default function Header() {
+  const { isLoggedIn, userName, logOut, signInWithGoogle } =
+    useContext(AuthContext);
+
+  const handleLogout = () => {
+    // Lógica para cerrar sesión
+    logOut();
+  };
+
   const [navigationVisible, setNavigationVisible] = useState(false);
   const handleNavigationVisible = () =>
     setNavigationVisible(!navigationVisible);
@@ -169,7 +179,14 @@ export default function Header() {
               <span className="fa-regular fa-cart-shopping header__content--desktop__icon2" />
               <span className="header__content--desktop__txt-btn">Carrito</span>
             </Link>
-            <p className="header__session-user">ESTADO DE SESION + USUARIO</p>
+            <p className="header__session-user">
+              {isLoggedIn ? `${userName}` : ""}
+            </p>
+            {isLoggedIn ? (
+              <button onClick={handleLogout}>Cerrar sesión</button>
+            ) : (
+              <button onClick={signInWithGoogle}>Login Google</button>
+            )}
           </div>
         </div>
       </div>

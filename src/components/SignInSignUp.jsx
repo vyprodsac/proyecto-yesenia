@@ -1,44 +1,44 @@
 import { Link } from "react-router-dom";
-import {} from "react";
-import { auth, googleProvider } from "../firebase/config";
-import { signInWithPopup, signOut } from "firebase/auth";
-import { useState, useEffect } from "react";
-
+// import {} from "react";
+// import { auth, googleProvider } from "../firebase/config";
+// import { signInWithPopup, signOut } from "firebase/auth";
+// import { useState, useEffect } from "react";
 
 export default function SignInSignUp() {
-  const [userName, setUserName] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [userName, setUserName] = useState("");
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  useEffect(() => {
-    const user = localStorage.getItem("user");
-    if (user) {
-      setUserName(user);
-      setIsLoggedIn(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const user = localStorage.getItem("user");
+  //   if (user) {
+  //     setUserName(user);
+  //     setIsLoggedIn(true);
+  //   }
+  // }, []);
 
-  const signInWithGoogle = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const userName = result.user?.displayName || "";
-      setUserName(userName);
-      setIsLoggedIn(true);
-      localStorage.setItem("user", userName); // Guarda el nombre de usuario en localStorage
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const signInWithGoogle = async () => {
+  //   try {
+  //     const result = await signInWithPopup(auth, googleProvider);
+  //     const userName = result.user?.displayName || "";
+  //     setUserName(userName);
+  //     setIsLoggedIn(true);
+  //     //crear un contexto de inicio de sesion y guardar el nombre de usuario
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
-  const logOut = async () => {
-    try {
-      await signOut(auth);
-      setUserName("");
-      setIsLoggedIn(false);
-      localStorage.removeItem("user"); // Elimina el nombre de usuario de localStorage
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const logOut = async () => {
+  //   try {
+  //     await signOut(auth);
+  //     setUserName("");
+  //     setIsLoggedIn(false);
+  //     localStorage.removeItem("user"); // Elimina el nombre de usuario de localStorage
+  //     // pasar todo esto a un contexto
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <section className="sign-in-sign-up container">
@@ -83,25 +83,25 @@ export default function SignInSignUp() {
             <Link to={"/planes"} className="sign-in-sign-up__sign-in-button">
               Iniciar sesión
             </Link>
-            <button
+            {/* <button
               type="button"
               onClick={signInWithGoogle}
               className="sign-in-sign-up__sign-in-button"
             >
               Iniciar sesión con Google
-            </button>
-            <p>
+            </button> */}
+            {/* <p>
               {isLoggedIn
                 ? `Estado: Logeado - Usuario: ${userName}`
                 : "Estado: No Logeado"}
-            </p>
-            <button
+            </p> */}
+            {/* <button
               type="button"
               onClick={logOut}
               className="sign-in-sign-up__sign-in-button"
             >
               Cerrar sesión
-            </button>
+            </button> */}
           </form>
         </div>
         {/* Registrarse */}
