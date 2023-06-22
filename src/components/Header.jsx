@@ -183,9 +183,11 @@ export default function Header() {
               {isLoggedIn ? `${userName}` : ""}
             </p>
             {isLoggedIn ? (
-              <button onClick={handleLogout}>Cerrar sesión</button>
+              <button onClick={handleLogout} className="header__logout">Cerrar sesión</button>
             ) : (
-              <button onClick={signInWithGoogle}>Login Google</button>
+              <button onClick={signInWithGoogle}>
+                <i className="logoGoogle fa-brands fa-google"></i>
+              </button>
             )}
           </div>
         </div>

@@ -184,9 +184,18 @@
   &__session-user {
     color: black;
     font-weight: 400;
-    display: block;
-    margin: 0;
-    padding: 0;
+    line-height: 32px;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  &__logout {
+    font-weight: 500;
+  }
+  .logoGoogle {
+    border-radius: 50%;
+    color: var(--theme-color1);
+    border: 1px solid var(--theme-color1);
+    padding: 0.8rem;
   }
 }
 
