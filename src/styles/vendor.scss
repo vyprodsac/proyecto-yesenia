@@ -11,3 +11,13 @@ $fa-font-path: "../assets/fonts/fontawesome";
 @import "vendor/fontawesome/sharp-light";
 @import "vendor/fontawesome/duotone";
 @import "vendor/fontawesome/_duotone-icons";
+
+// Default theme
+@import "@splidejs/react-splide/css";
+// @import "../../node_modules/@splidejs/";
+// or other themes
+@import "@splidejs/react-splide/css/skyblue";
+@import "@splidejs/react-splide/css/sea-green";
+
+// or only core styles
+@import "@splidejs/react-splide/css/core";

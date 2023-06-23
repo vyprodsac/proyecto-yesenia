@@ -71,15 +71,23 @@
       grid-column: span 9 / span 4;
     }
   }
+  &__product-category {
+    color: gray;
+    font-size: 14px;
+    font-style: italic;
+  }
   &__product {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
     img {
       border-radius: 10px;
+      height: 190px;
+      object-fit: cover;
     }
     text-align: center;
     font-weight: 500;
+    font-size: 18px;
     button {
       border: 1px solid var(--theme-color1);
       padding: 8px;

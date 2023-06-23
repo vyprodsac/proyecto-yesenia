@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import imgHero from "../assets/images/hero5.jpg";
+// import imgHero from "../assets/images/hero5.jpg";
 export default function Hero() {
   return (
     <section className="hero">
@@ -15,7 +15,12 @@ export default function Hero() {
           </Link>
         </div>
         <div className="hero__img-container">
-          <img src={imgHero} alt="" className="hero__img" />
+          {/* <img src={imgHero} alt="" className="hero__img" /> */}
+          <img
+            src="https://images.pexels.com/photos/7620627/pexels-photo-7620627.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            className="hero__img"
+          />
         </div>
       </div>
     </section>
