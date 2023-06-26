@@ -11,6 +11,7 @@ import Platform2 from "./pages/Platform2";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import { AuthProvider } from "./components/AuthContext";
+import Report from "./pages/Report";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/plataforma-inicio2" element={<Platform2 />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/check-out" element={<Checkout />} />
+            <Route path="/reportar-vendedor" element={<Report/>} />
           </Routes>
         </Layout>
       </BrowserRouter>

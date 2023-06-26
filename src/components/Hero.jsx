@@ -11,7 +11,7 @@ export default function Hero() {
             productos que tenemos para ti.
           </h1>
           <Link to={"/plataforma-inicio2"}>
-            <button className="hero__btn">Conoce más aqui</button>
+            <button className="hero__btn">Conoce más productos aqui</button>
           </Link>
         </div>
         <div className="hero__img-container">

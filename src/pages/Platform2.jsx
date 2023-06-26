@@ -1,16 +1,12 @@
 import { useState } from "react";
-// import profile1 from "../assets/images/profile-1.jpg";
-// import profile2 from "../assets/images/profile-2.jpg";
-// import profile3 from "../assets/images/profile-3.jpg";
-// import profile4 from "../assets/images/profile-4.jpg";
-// import profile5 from "../assets/images/profile-5.jpg";
-// import profile6 from "../assets/images/profile-6.jpg";
-// import profile7 from "../assets/images/profile-7.jpg";
 import { db } from "../firebase/config";
 import { getDocs, collection } from "firebase/firestore";
 import { useCallback } from "react";
 import { useEffect } from "react";
 import ContentLoader from "react-content-loader";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
+import withReactContent from "sweetalert2-react-content";
 
 export default function Platform2() {
   const [dataList, setDataList] = useState(null);
@@ -32,6 +28,18 @@ export default function Platform2() {
     getDataList();
   }, []);
 
+  const handleAddToCart = () => {
+    const MySwal = withReactContent(Swal);
+
+    MySwal.fire({
+      title: <p>Producto añadido</p>,
+      position: "center",
+      icon: "success",
+      showConfirmButton: false,
+      timer: 2000,
+    });
+  };
+
   return (
     <section className="platform2">
       <div className="platform2__container container">
@@ -39,7 +47,9 @@ export default function Platform2() {
           <h2>Bienvenida Luz</h2>
           <ul className="platform2__list">
             <li>
-              <i className="fa-duotone fa-flag"></i> Reportar vendedor
+              <Link className="platform2__report " to={"/reportar-vendedor"}>
+                <span className="fa-duotone fa-flag"></span> Reportar vendedor
+              </Link>
             </li>
             <li>
               <i className="fa-duotone fa-books"></i> Cursos
@@ -127,7 +137,7 @@ export default function Platform2() {
                   <p>
                     {data.name} - S/{data.precio}
                   </p>
-                  <button>Añadir al carrito</button>
+                  <button onClick={handleAddToCart}>Añadir al carrito</button>
                 </div>
               ))
             )}
