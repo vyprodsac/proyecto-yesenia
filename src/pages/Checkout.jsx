@@ -1,4 +1,17 @@
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
 export default function Checkout() {
+  const MySwal = withReactContent(Swal);
+  const handlePayProducts = () => {
+    MySwal.fire({
+      title: <p>Compra hecha, pronto nos pondremos en contacto contigo.</p>,
+      position: "center",
+      icon: "success",
+      showConfirmButton: false,
+      timer: 3000,
+    });
+  };
   return (
     <section className="checkout">
       <h1 className="checkout__title">Checkout</h1>
@@ -39,10 +52,12 @@ export default function Checkout() {
             </div>
             <div className="checkout__shipment-radio">
               <input type="radio" name="envio" id="" />
-              <label htmlFor="">Retiro en tienda</label>
+              <label htmlFor="">Retiro en casillero</label>
             </div>
           </form>
-          <button className="checkout__pay">Finalizar compra</button>
+          <button className="checkout__pay" onClick={handlePayProducts}>
+            Finalizar compra
+          </button>
         </div>
       </div>
     </section>

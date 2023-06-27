@@ -12,6 +12,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import { AuthProvider } from "./components/AuthContext";
 import Report from "./pages/Report";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
             <Route path="/plataforma-inicio2" element={<Platform2 />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/check-out" element={<Checkout />} />
-            <Route path="/reportar-vendedor" element={<Report/>} />
+            <Route path="/reportar-vendedor" element={<Report />} />
+            <Route path="/agregar-producto" element={<AddProduct />} />
           </Routes>
         </Layout>
       </BrowserRouter>

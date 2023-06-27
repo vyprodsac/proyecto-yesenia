@@ -35,7 +35,6 @@ export default function Report() {
    */
   const onSubmitData = async () => {
     const MySwal = withReactContent(Swal);
-    // Verificar el tamaño del archivo
 
     // Validar que todos los campos del formulario estén completos
     if (
@@ -52,6 +51,7 @@ export default function Report() {
         timer: 2000,
       });
     }
+    // Verificar el tamaño del archivo
     if (fileUpload.size > 8 * 1024 * 1024) {
       MySwal.fire({
         title: <p>El tamaño del archivo supera el límite de 8MB</p>,
@@ -163,7 +163,6 @@ export default function Report() {
               disabled={uploading} // Deshabilitar el campo mientras se carga
             />
           </div>
-
           <button
             type="button"
             className="report__btn"
