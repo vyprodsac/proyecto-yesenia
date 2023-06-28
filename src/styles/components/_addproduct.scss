@@ -1,5 +1,9 @@
 .add-product {
-  padding-top: 12rem;
+  color: #353838;
+  padding-top: 5.5rem;
+  @media (min-width: 992px) {
+    padding-top: 12rem;
+  }
   &__form {
     width: 100%;
     padding-top: 1rem;

@@ -96,6 +96,7 @@ export default function Report() {
         producto: newNameProduct,
         descripcionReporte: newDescription,
         imgUrl: downloadURL,
+        uui: crypto.randomUUID(),
       });
 
       // Mostrar un mensaje de éxito
@@ -111,6 +112,10 @@ export default function Report() {
     } finally {
       setUploading(false); // Habilitar el formulario y el botón de envío
       setProgress(0); // Reiniciar el progreso de carga
+      setNewDescription(""); // Reiniciar el campo de descripción")
+      setNewNameProduct(""); // Reiniciar el campo de nombre del producto
+      setNewNameSeller(""); // Reiniciar el campo de nombre del vendedor
+      setFileUpload(null); // Reiniciar el campo de archivo
     }
   };
 

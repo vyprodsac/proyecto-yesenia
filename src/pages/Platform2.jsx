@@ -4,8 +4,8 @@ import { getDocs, collection } from "firebase/firestore";
 import { useCallback } from "react";
 import { useEffect } from "react";
 import ContentLoader from "react-content-loader";
-import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
 export default function Platform2() {
@@ -26,6 +26,7 @@ export default function Platform2() {
   }, [dataCollectionRef]);
   useEffect(() => {
     getDataList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleAddToCart = () => {
@@ -130,12 +131,14 @@ export default function Platform2() {
             ) : (
               dataList.map((data) => (
                 <div key={data.id} className="platform2__product">
-                  <img src={data.img} alt="" />
+                  <Link to={`/producto-detalle/${data.id}`}>
+                    <img src={data.imgUrl} alt="" />
+                  </Link>
                   <p className="platform2__product-category">
-                    {data.categoria}
+                    {data.productCategory}
                   </p>
                   <p>
-                    {data.name} - S/{data.precio}
+                    {data.productName} - S/{data.productPrice}
                   </p>
                   <button onClick={handleAddToCart}>Añadir al carrito</button>
                 </div>

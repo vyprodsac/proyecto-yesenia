@@ -13,6 +13,7 @@ import Checkout from "./pages/Checkout";
 import { AuthProvider } from "./components/AuthContext";
 import Report from "./pages/Report";
 import AddProduct from "./pages/AddProduct";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/check-out" element={<Checkout />} />
             <Route path="/reportar-vendedor" element={<Report />} />
             <Route path="/agregar-producto" element={<AddProduct />} />
+            <Route path="/producto-detalle/:id" element={<Product />} />
           </Routes>
         </Layout>
       </BrowserRouter>
