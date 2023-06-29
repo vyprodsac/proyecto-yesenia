@@ -22,22 +22,41 @@ export default function Testimonials() {
             <div className="testimonials__item1">
               <img
                 className="testimonials__item1-image"
-                src={testimonialImg}
+                src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Testimonals Img"
                 title="Testimonals Img"
               />
-              <p className="testimonials__item1-name">Jhon Doe</p>
-              <p className="testimonials__item1-description">Lorem Ipsum</p>
+              <p className="testimonials__item1-name">R. Acosta</p>
+              <p className="testimonials__item1-description">Cliente</p>
+              <i className="fa-solid fa-quote-right"></i>
+            </div>
+            <div className="testimonials__item2">
+              <div className="testimonials__item2-testimonial">
+                <p>Esta plataforma me ayudo a crecer profesionalmente.</p>
+              </div>
+            </div>
+          </div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className="testimonials__content">
+            <div className="testimonials__item1">
+              <img
+                className="testimonials__item1-image"
+                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Testimonals Img"
+                title="Testimonals Img"
+              />
+              <p className="testimonials__item1-name">M. Sanchez</p>
+              <p className="testimonials__item1-description">Cliente</p>
               <i className="fa-solid fa-quote-right"></i>
             </div>
             <div className="testimonials__item2">
               <div className="testimonials__item2-testimonial">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  at lorem eget neque laoreet tempus. Fusce pretium convallis
-                  velit, vitae pulvinar ante bibendum ut. Aliquam sapien magna,
-                  posuere vel quam maximus, volutpat mollis sem. Nunc diam nunc,
-                  hendrerit sed ullamcorper id, consequat maximus ex.
+                  Llevo un año vendiendo por internet y hasta ahora no eh visto
+                  una plataforma que se especializa en emprender. Ahora que
+                  formo parte de la familia Vendifast siento que creceré como un
+                  emprendedor que soy.
                 </p>
               </div>
             </div>
@@ -48,22 +67,19 @@ export default function Testimonials() {
             <div className="testimonials__item1">
               <img
                 className="testimonials__item1-image"
-                src={testimonialImg}
+                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Testimonals Img"
                 title="Testimonals Img"
               />
-              <p className="testimonials__item1-name">Jhon Doe</p>
-              <p className="testimonials__item1-description">Lorem Ipsum</p>
+              <p className="testimonials__item1-name">R. Jiménez</p>
+              <p className="testimonials__item1-description">Cliente</p>
               <i className="fa-solid fa-quote-right"></i>
             </div>
             <div className="testimonials__item2">
               <div className="testimonials__item2-testimonial">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  at lorem eget neque laoreet tempus. Fusce pretium convallis
-                  velit, vitae pulvinar ante bibendum ut. Aliquam sapien magna,
-                  posuere vel quam maximus, volutpat mollis sem. Nunc diam nunc,
-                  hendrerit sed ullamcorper id, consequat maximus ex.
+                  Vendifast me ha ayudado a crecer exponencialmente, siento que
+                  con sus cursos estoy aprendiendo rápido y dominando técnicas.
                 </p>
               </div>
             </div>
