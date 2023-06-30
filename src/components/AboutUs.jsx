@@ -8,7 +8,7 @@ export default function AboutUs() {
             || Somos una empresa{" "}
             <span className="about-us__subtitle--bold">sostenible</span>
           </h2>
-          En Vendifast no solo encuentras lo que necesitas, sino también
+          En VENDIFAST no solo encuentras lo que necesitas, sino también
           productos de mejor calidad, el mejor diseño y al mejor precio.
           Contamos con diferentes tipos de emprendedores, donde ofrecen una
           variedad de productos únicos para nuestros clientes. Así este buscando
