@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import vevigLogo from "../assets/images/company_logo.svg";
+import vevigLogo from "../assets/images/logoCalidadAlta.png";
 import { useContext } from "react";
 import { AuthContext } from "./AuthContext";
 
@@ -183,7 +183,9 @@ export default function Header() {
               {isLoggedIn ? `${userName}` : ""}
             </p>
             {isLoggedIn ? (
-              <button onClick={handleLogout} className="header__logout">Cerrar sesión</button>
+              <button onClick={handleLogout} className="header__logout">
+                Cerrar sesión
+              </button>
             ) : (
               <button onClick={signInWithGoogle}>
                 <i className="logoGoogle fa-brands fa-google"></i>
