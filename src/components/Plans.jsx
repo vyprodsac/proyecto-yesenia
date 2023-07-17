@@ -28,6 +28,7 @@ export default function Plans() {
           <Link to={"/perfil-plataforma"} className="plans__button">
             Suscríbete - S/.10.00 x mes
           </Link>
+          a
         </div>
       </div>
     </section>
